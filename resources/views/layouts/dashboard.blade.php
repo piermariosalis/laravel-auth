@@ -15,16 +15,17 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Boolean') }}
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -51,7 +52,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                <i class="fas fa-user fa-lg fa-fw   "></i>{{ Auth::user()->name }} 
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -72,17 +73,23 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        @yield('content')
-                    </div>
-                    
+
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <ul class="list-unstyled">
+                        <li><a href=""><i class="fas fa-home fa-lg fa-fw"></i>Dashboard</a></li>
+                        <li><a href=""><i class="far fa-newspaper fa-lg fa-fw"></i>Articles</a></li>
+                        <li><a href=""><i class="far fa-window-restore fa-lg fa-fw"></i>Categories</a></li>
+                        <li><a href=""><i class="fas fa-tags fa-lg fa-fw"></i>Tags</a></li>
+                    </ul>
                 </div>
+                <main class="col-xs-12 col-md-9 col-lg-9">
+                    @yield('content')
+                </main>
             </div>
-            
-        </main>
+        </div>
+
     </div>
 </body>
 </html>
