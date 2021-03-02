@@ -20,18 +20,3 @@
 </div>
 @endforeach
 @endsection
-
-<!-- @foreach($articles as $article)
-<div class="container-fluid ">
-    <div class="card-rows">
-        <div class="card ">
-            <img class="card-img-top" src="holder.js/100x180/" alt="">
-            <div class="card-body col-lg-12">
-                <h4 class="card-title ">{{ $article->title}}</h4>
-                <p class="card-text">{{ $article->body}}</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-@endforeach -->
