@@ -20,7 +20,7 @@
             <td><{{$article->title}}</td>
             <td>{{$article->slug}}</td>
             <td>
-                <a href="" class="btn btn-primary"><i class="fas fa-book-open"></i>Open</a>
+                <a href="{{route('admin.articles.show', ['article'=> $article->slug] )}}" class="btn btn-primary"><i class="fas fa-book-open"></i>Open</a>
                 <a href="" class="btn btn-primary"><i class="fas fa-edit"></i>Edit</a>
                 <a href="" class="btn btn-primary"><i class="fas fa-trash"></i>Trash</a>
             </td>

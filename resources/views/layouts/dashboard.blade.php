@@ -78,8 +78,8 @@
             <div class="row">
                 <div class="col-xs-12 col-md-3 col-lg-3">
                     <ul class="list-unstyled">
-                        <li><a href=""><i class="fas fa-home fa-lg fa-fw"></i>Dashboard</a></li>
-                        <li><a href=""><i class="far fa-newspaper fa-lg fa-fw"></i>Articles</a></li>
+                        <li><a href="{{route('admin.index')}}"><i class="fas fa-home fa-lg fa-fw"></i>Dashboard</a></li>
+                        <li><a href="{{route('admin.articles.index')}}"><i class="far fa-newspaper fa-lg fa-fw"></i>Articles</a></li>
                         <li><a href=""><i class="far fa-window-restore fa-lg fa-fw"></i>Categories</a></li>
                         <li><a href=""><i class="fas fa-tags fa-lg fa-fw"></i>Tags</a></li>
                     </ul>

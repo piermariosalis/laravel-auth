@@ -1,12 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
-
-<div class="jumbotron col-lg-12">
-    <h1 class="display-12">Dashboard Articles</h1>
-    
-</div>
-@foreach($articles as $article)
 <div class="container">
     <div class="">
             <h1>{{ $article->id}} {{ $article->title}}</h1>
@@ -18,5 +12,5 @@
             <hr>
     </div>
 </div>
-@endforeach
+
 @endsection

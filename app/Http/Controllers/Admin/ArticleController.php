@@ -49,6 +49,7 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
         //
+        return view('admin.articles.show', compact('article'));
     }
 
     /**
